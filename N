@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
+# start neovim, adding the current working directory to the run-time-path
+
 nvim --cmd "set rtp+=$(pwd)" 

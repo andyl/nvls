@@ -14,6 +14,10 @@ Set runtime path to your current directory - loads code from `./plugin`.
 
     nvim --cmd "set rtp+=$(pwd)"
 
+## Lua Basics
+
+    :lua print("hello")
+
 ## Looking up Lua documentation
 
     :help nvim<tab>
@@ -21,6 +25,13 @@ Set runtime path to your current directory - loads code from `./plugin`.
     :help vim<tab>
     :help vim.fn<tab>
 
-print(vim.fn.nvim_win_get_width(0))
-print(vim.fn.nvim_win_get_height(0))
+    :lua print(vim.fn.nvim_win_get_width(0))
+    :lua print(vim.fn.nvim_win_get_height(0))
 
+## Running the Plugin
+
+    $ ./N                # Start Nvim
+    :echo nvls_value     " echo a variable value
+    :call NvlsVarPrint() " prints global variable
+    :call NvlsWinPrint() " prints window size
+    :call NvlsWinShow()  " :q to exit the popup window...
